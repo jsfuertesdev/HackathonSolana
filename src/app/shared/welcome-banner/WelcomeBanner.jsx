@@ -1,4 +1,5 @@
 import "./welcomeBanner.scss";
+import Link from "next/link";
 
 function WelcomeBanner() {
   return (
@@ -13,8 +14,12 @@ function WelcomeBanner() {
       <div className="content">
         <img className="logo" src="/logo.png" alt="Logo" />
         <div className="buttons">
-          <button className="btn">I'm an allie</button>
-          <button className="btn">I'm an user</button>
+          <Link className="btn-container" href={`/upload-exercise`}>
+            <button className="btn">I'm an allie</button>
+          </Link>
+          <Link className="btn-container" href={`/exercises-gallery`}>
+            <button className="btn">I'm an user</button>
+          </Link>
         </div>
       </div>
     </div>

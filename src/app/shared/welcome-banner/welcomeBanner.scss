@@ -1,4 +1,4 @@
-@import '../../globals.scss';
+@import "../../globals.scss";
 
 .welcome-banner__container {
   @include displayFlex(row, flex-start, flex-start);
@@ -39,8 +39,13 @@
       height: fit-content;
       @include displayFlex(row, space-between, center, 2rem);
 
-      .btn {
+      .btn-container {
         width: calc(50% - 2rem);
+        height: fit-content;
+
+        .btn {
+          width: 100%;
+        }
       }
     }
   }
