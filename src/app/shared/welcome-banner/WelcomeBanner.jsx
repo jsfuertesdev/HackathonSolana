@@ -15,7 +15,7 @@ function WelcomeBanner() {
         <img className="logo" src="/logo.png" alt="Logo" />
         <div className="buttons">
           <Link className="btn-container" href={`/upload-exercise`}>
-            <button className="btn">I'm an allie</button>
+            <button className="btn">I'm an ally</button>
           </Link>
           <Link className="btn-container" href={`/exercises-gallery`}>
             <button className="btn">I'm an user</button>
