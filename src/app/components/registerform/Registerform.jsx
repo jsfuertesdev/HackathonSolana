@@ -14,6 +14,7 @@ function Registerform() {
             <input className='input-text' type="url" />
             <label>Etiquetas</label>
             <input className='input-text' type="tags" />
+            <button className='button-win'>Connect wallet</button>
             <button className='button-win'>WIN TOKENS</button>
         </form>
     </div>
