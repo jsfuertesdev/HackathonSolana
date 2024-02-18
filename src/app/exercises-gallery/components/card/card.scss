@@ -1,41 +1,63 @@
 @import '../../../globals.scss';
 
-.card-general{
-    @include displayFlex(column, start, start);
+.card__container {
+    @include displayFlex(column, start, start, 1rem);
     color: #ffffff;
-    width: 100%;
-    height: 100%;
-    padding-left: 5%;
-}
+    width: 35rem;
+    height: 35rem;
+    padding: 1.2rem;
+    background-color: $grey;
+    border-radius: $border-radius;
+    font-size: 1.4rem;
 
-.container-img {
-    justify-content: center;
-    width: 90%;
-    height: 60%;
-    margin-top: 5%;
-    margin-bottom: 3%;
-    img {
-        border-radius: 10px;
+    .card-image__container {
         width: 100%;
-        height: 100%;
+        height: 22rem;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        overflow: hidden;
+        object-fit: cover;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-content__container {
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
+
+    .tags-container {
+        @include displayFlex(row, flex-start, flex-start, 0.8rem);
+        width: 100%;
+
+        .tag {
+            height: fit-content;
+            width: fit-content;
+            padding: 0.3rem 0.5rem;
+            background-color: $secondary-color;
+        }
     }
 }
 
-.tags-container{
-    display: flex;
-    width: 90%;
-    height: fit-content;
-    gap: 5px;
-    text-align: center;
-    flex-wrap: wrap;
-    margin-top: 3%;
-    margin-right: 20%;
-}
+// .tags-container{
+//     display: flex;
+//     width: 90%;
+//     height: fit-content;
+//     gap: 5px;
+//     text-align: center;
+//     flex-wrap: wrap;
+//     margin-top: 3%;
+//     margin-right: 20%;
+// }
 
-.tag{
-    width: fit-content;
-    height: fit-content;
-    padding: 1% 1%;
-    border-radius: 10px;
-    background-color: #d251ff;
-}
+// .tag{
+//     width: fit-content;
+//     height: fit-content;
+//     padding: 1% 1%;
+//     border-radius: 10px;
+//     background-color: #d251ff;
+// }
