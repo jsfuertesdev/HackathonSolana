@@ -1,0 +1,30 @@
+@import '../../globals.scss';
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: black;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+}
+
+.left-side {
+    display: flex;
+    flex-direction:row;
+    gap: 10%;
+    width: 20%;
+    color: white;
+    font-weight: 600;
+    align-items: baseline;
+}
+
+button {
+    background-color: #d251ff;
+    padding: 2%;
+    border-radius: 10px;
+}

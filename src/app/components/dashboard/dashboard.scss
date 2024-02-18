@@ -1,0 +1,17 @@
+@import '../../globals.scss';
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(2, minmax(300px, 1fr)); /* On small screens, change to a single column layout */
+    }
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr; /* On small screens, change to a single column layout */
+    }
+
+}

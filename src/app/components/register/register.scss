@@ -1,0 +1,23 @@
+@import '../../globals.scss';
+
+.title {
+    margin: 2%;
+}
+
+.review {
+    color: white;
+    margin: 1%;
+}
+
+.form-upload {
+    display: flex;
+    flex-direction: row;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    h3 {
+        text-align: center;
+    }
+}
