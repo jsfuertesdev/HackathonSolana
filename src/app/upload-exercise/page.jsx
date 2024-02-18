@@ -13,7 +13,7 @@ const data = {
 
 function page() {
   return (
-    <div className="upload-gallery__page">
+    <div className="upload-gallery__page">  
       <div className="title">
         <h2>Upload Exercise</h2>
       </div>

@@ -16,12 +16,13 @@
   }
 
   .upload-exercise__content {
-    @include displayFlex(row, space-evenly, center);
+    @include displayFlex(row, center, center, 15rem);
+    height: calc(100vh - 15rem);
     padding: 2rem;
 
     .exercise-preview,
     upload-exercise__form {
-      width: 50%;
+      width: fit-content;
     }
   }
 }
