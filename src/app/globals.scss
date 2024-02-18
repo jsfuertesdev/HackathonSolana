@@ -1,6 +1,6 @@
-$main-color: #d251ff;
+$main-color: #cffa22;
 $main-color-variation: #dee7ff;
-$secondary-color: #ce2e4a;
+$secondary-color: #d251ff;
 $background-color: #0e0c10;
 $font-family:  "Roboto", sans-serif;
 $border-radius: 0.4rem;
@@ -35,7 +35,7 @@ body {
   padding: 0 1rem;
   border: none;
   border-radius: $border-radius;
-  background-color: $main-color;
+  background-color: $secondary-color;
   color: white;
   font-family: $font-family;
   font-weight: 600;
@@ -43,7 +43,7 @@ body {
 }
 
 .btn:hover {
-  background-color: $secondary-color;
+  background-color: $main-color;
 }
 
 .btn:active {

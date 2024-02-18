@@ -3,10 +3,13 @@ import './navbar.scss';
 function Navbar() {
   return (
     <div className='navbar'>
-        <h2 className='title'>Company Name</h2>
+        <img className="logo" src="/logo.png" alt="Logo AthleteAlly" />
         <div className='left-side'>
-            <p>Welcome, User</p>
-            <button>Generate Routine!</button>
+          <div className="user-data">
+            <p className='user-name'>Welcome, Zara</p>
+            <img className='user-picture' src="/person.jpg" alt="Image Profile" />
+          </div>
+            <button className='btn'>GENERATE ROUTINE!</button>
         </div>
     </div>
   )
