@@ -1,4 +1,4 @@
-@import '../globals.scss';
+@import "../globals.scss";
 
 .upload-gallery__page {
   padding: 1rem;
@@ -16,7 +16,12 @@
   }
 
   .upload-exercise__content {
-    @include displayFlex(row, center, center, 5rem);
+    @include displayFlex(row, space-evenly, center);
     padding: 2rem;
+
+    .exercise-preview,
+    upload-exercise__form {
+      width: 50%;
+    }
   }
 }
