@@ -6,6 +6,7 @@ function NavbarTrainer() {
         <img className="logo" src="/logo.png" alt="Logo AthleteAlly" />
         <div className='left-side'>
           <div className="user-data">
+            <p className='trainer'>Trainer</p>
             <p className='user-name'>Welcome, Carlos</p>
             <img className='user-picture' src="/trainer.jpg" alt="Image Profile" />
           </div>

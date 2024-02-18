@@ -1,7 +1,7 @@
 @import '../../globals.scss';
 
 .navbar {
-    @include displayFlex(row, space-between, center);
+    @include displayFlex(row, space-between, center, 2rem);
     height: 6rem;
     width: 100vw;
     padding: 0 2rem;
@@ -19,10 +19,14 @@
         align-items: baseline;
 
         .user-data {
-            @include displayFlex(row, center, center, 2rem);
-            width: 20rem;
+            @include displayFlex(row, flex-end, center, 2rem);
+            width: 50rem;
             color: white;
             font-weight: bold;
+
+            .user {
+                color: $main-color;
+            }
 
             .user-picture {
                 width: 4rem;
@@ -30,6 +34,10 @@
                 border-radius: 50%;
                 object-fit: cover
             }
+        }
+
+        .btn {
+            margin-left: 2rem;
         }
     }
 }

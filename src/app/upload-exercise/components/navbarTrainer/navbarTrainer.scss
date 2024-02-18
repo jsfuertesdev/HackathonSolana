@@ -19,10 +19,14 @@
         align-items: baseline;
 
         .user-data {
-            @include displayFlex(row, center, center, 2rem);
-            width: 20rem;
+            @include displayFlex(row, flex-end, center, 2rem);
+            width: 50rem;
             color: white;
             font-weight: bold;
+
+            .trainer {
+                color: $secondary-color;
+            }
 
             .user-picture {
                 width: 4rem;
