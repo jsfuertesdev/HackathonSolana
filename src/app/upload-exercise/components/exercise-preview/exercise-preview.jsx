@@ -1,11 +1,11 @@
 import './exercise-preview.scss';
 
-function Register({title, author, exercise, tags}) {
+function ExercisePreview({title, author, image, tags}) {
   return (
     <div>
       <div className='card__container'>
         <div className='card-image__container'>
-          <img src={exercise} alt="exercise" />
+          <img src={image} alt="exercise" />
         </div>
         <div className="card-content__container">
           <h2>{title}</h2>
@@ -21,4 +21,4 @@ function Register({title, author, exercise, tags}) {
   )
 }
 
-export default Register
+export default ExercisePreview

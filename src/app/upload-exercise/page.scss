@@ -15,8 +15,8 @@
     }
   }
 
-  .upload-exercise__form {
+  .upload-exercise__content {
+    @include displayFlex(row, center, center, 5rem);
     padding: 2rem;
   }
-
 }
