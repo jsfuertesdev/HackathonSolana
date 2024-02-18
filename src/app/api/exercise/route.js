@@ -1,5 +1,5 @@
-import getAllExercises from "@/controllers/getAllExercises";
-import postNewExercises from "@/controllers/postNewExercises";
+import getAllExercises from "../../../controllers/getAllExercises";
+import postNewExercises from "../../../controllers/postNewExercises";
 
 export async function GET(request) {
   try {

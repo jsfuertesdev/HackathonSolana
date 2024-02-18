@@ -1,6 +1,6 @@
-import User from "@/models/Users";
-import Sports from "@/models/Sports";
-import Exercises_use_sports from "@/models/Exercises_use_sports";
+import User from "../../../models/Users";
+import Sports from "../../../models/Sports";
+import Exercises_use_sports from "../../../models/Exercises_use_sports";
 
 export async function GET(request) {
   await Sports.findAll();
