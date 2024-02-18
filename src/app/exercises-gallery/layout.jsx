@@ -1,6 +1,8 @@
+'use client';
 import Navbar from "../shared/navbar/Navbar";
 
 export default function Layout({ children }) {
+
   return (
     <div className="exercises-gallery__page">
       <div className="exercises-gallery__header">

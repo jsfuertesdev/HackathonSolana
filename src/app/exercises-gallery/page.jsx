@@ -1,6 +1,10 @@
 import Dashboard from './components/dashboard/Dashboard'
 import './page.scss'
 
+export const showModalNotification = () => {
+  
+}
+
 function page() {
   return (
     <div className="exercises-gallery_page">
