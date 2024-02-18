@@ -1,9 +1,12 @@
-import Navbar from '../components/navbar/Navbar'
+import Navbar from "../shared/navbar/Navbar";
 
-function Layout() {
+export default function Layout({ children }) {
   return (
-    <Navbar/>
-  )
+    <div className="exercises-gallery__page">
+      <div className="exercises-gallery__header">
+        <Navbar></Navbar>
+      </div>
+      <div className="exercises-gallery__content">{children}</div>
+    </div>
+  );
 }
-
-export default Layout

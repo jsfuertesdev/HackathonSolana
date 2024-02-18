@@ -14,10 +14,15 @@ $border-radius: 0.4rem;
   flex-wrap: $wrap;
 }
 
+@mixin calcHeigthNoHeader($measure)  {
+  height: calc($measure - 6rem);
+}
+
 html {
   font-size: 10px;
   font-family: $font-family;
   scroll-behavior: smooth;
+  color: white;
 }
 
 * {
