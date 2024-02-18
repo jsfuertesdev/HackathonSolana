@@ -15,6 +15,16 @@
     "pg-hstore": "^2.3.4",
     "react": "^18",
     "react-dom": "^18",
-    "sequelize": "^6.37.1"
+    "sequelize": "^6.37.1",
+    "web3": "^4.5.0",
+    "ethers": "^6.11.1",
+    "eventemitter3": "^5.0.1",
+    "framer-motion": "^11.0.5",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@solana/web3.js": "^1.90.0",
+    "@web3-react/core": "^8.2.3",
+    "@web3-react/injected-connector": "^6.0.7",
   }
 }
