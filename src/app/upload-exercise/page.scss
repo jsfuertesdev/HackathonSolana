@@ -1,2 +1,22 @@
 @import '../globals.scss';
 
+.upload-gallery__page {
+  padding: 1rem;
+
+  .title {
+    @include displayFlex(row, flex-start, center);
+    width: 100%;
+    height: 5rem;
+    border-bottom: 0.1rem solid $grey;
+
+    h2 {
+      font-size: 2.2rem;
+      margin-left: 2rem;
+    }
+  }
+
+  .upload-exercise__form {
+    padding: 2rem;
+  }
+
+}
