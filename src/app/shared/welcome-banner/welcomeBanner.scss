@@ -1,0 +1,47 @@
+@import '../../globals.scss';
+
+.welcome-banner__container {
+  @include displayFlex(row, flex-start, flex-start);
+  width: 98vw;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  // .video {
+  //   width: 49%;
+
+  //   video {
+  //     width: 100%;
+  //   }
+  // }
+
+  .banner__container {
+    width: 38%;
+
+    .banner {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+  .content {
+    @include displayFlex(column, center, flex-start, 1rem);
+    width: 49%;
+    height: 100%;
+    padding-left: 10rem;
+
+    .logo {
+      width: 60rem;
+    }
+
+    .buttons {
+      width: 60rem;
+      height: fit-content;
+      @include displayFlex(row, space-between, center, 2rem);
+
+      .btn {
+        width: calc(50% - 2rem);
+      }
+    }
+  }
+}

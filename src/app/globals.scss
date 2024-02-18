@@ -50,8 +50,10 @@ body {
 
 .btn:hover {
   background-color: $main-color;
+  color: $background-color;
 }
 
 .btn:active {
   background-color: $background-color;
+  color: $secondary-color;
 }
