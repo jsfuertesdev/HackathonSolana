@@ -2,7 +2,8 @@ import './exercise-preview.scss';
 
 function ExercisePreview({title, author, image, tags}) {
   return (
-    <div>
+    <div className='container'>
+      <h2>Preview</h2>
       <div className='card__container'>
         <div className='card-image__container'>
           <img src={image} alt="exercise" />

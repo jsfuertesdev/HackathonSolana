@@ -1,5 +1,9 @@
 @import '../../../globals.scss';
 
+h2 {
+    margin-bottom: 1rem;
+}
+
 .card__container {
     @include displayFlex(column, start, start, 1rem);
     color: #ffffff;
