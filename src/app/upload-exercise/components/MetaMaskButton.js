@@ -1,6 +1,5 @@
 'use client'
 
-
 import React, { useEffect, useState } from 'react';
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 

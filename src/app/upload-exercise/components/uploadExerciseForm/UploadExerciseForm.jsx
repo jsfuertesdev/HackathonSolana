@@ -1,4 +1,5 @@
 import "./uploadExerciseForm.scss";
+import MetaMaskButton from "../MetaMaskButton";
 
 function UploadExerciseForm() {
   return (
@@ -24,6 +25,7 @@ function UploadExerciseForm() {
           <label className="lbl">Etiquetas</label>
           <input required className="ipt" type="tags" />
         </div>
+        <MetaMaskButton />
         <button className="btn">WIN TOKENS</button>
       </form>
     </div>
