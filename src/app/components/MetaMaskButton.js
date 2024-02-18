@@ -1,25 +1,28 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
-import Web3 from 'web3';
 
-const MetaMaskButton = () => {
+import React, { useEffect, useState } from 'react';
+import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
+
+const SolanaButton = () => {
   const [currentAccount, setCurrentAccount] = useState(null);
 
   const handleConnect = async () => {
-    if (window.ethereum) {
-      window.web3 = new Web3(ethereum);
+    if (window.solana) {
       try {
-        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-        setCurrentAccount(accounts[0]);
+        const response = await window.solana.connect();
+        const publicKey = new PublicKey(response.publicKey);
+        setCurrentAccount(publicKey.toString());
       } catch (error) {
         console.error(error);
       }
-    } else if (window.web3) {
-      window.web3 = new Web3(web3.currentProvider);
     } else {
-      console.log('Navegador no-Ethereum detectado. Considera probar MetaMask!');
+      console.log('Navegador no-Solana detectado. Considera probar Solana Wallet!');
     }
+  };
+
+  const handleLogout = () => {
+    setCurrentAccount(null);
   };
 
   useEffect(() => {
@@ -31,10 +34,6 @@ const MetaMaskButton = () => {
     };
   }, []);
 
-  const handleLogout = () => {
-    setCurrentAccount(null);
-  };
-
   return (
     <div>
       {currentAccount ? (
@@ -43,10 +42,10 @@ const MetaMaskButton = () => {
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <button onClick={handleConnect} id="connectButton">Connect to Ethereum</button>
+        <button onClick={handleConnect} id="connectButton">Connect to Solana</button>
       )}
     </div>
   );
 };
 
-export default MetaMaskButton;
+export default SolanaButton;
