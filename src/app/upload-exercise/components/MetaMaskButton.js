@@ -16,7 +16,7 @@ const SolanaButton = () => {
         console.error(error);
       }
     } else {
-      console.log('Navegador no-Solana detectado. Considera probar Solana Wallet!');
+      alert('Navegador no-Solana detectado. Considera probar Solana Wallet!');
     }
   };
 
