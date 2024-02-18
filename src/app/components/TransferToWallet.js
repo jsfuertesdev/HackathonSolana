@@ -1,43 +1,64 @@
-import { Connection, PublicKey, Transaction, SystemProgram } from '@solana/web3.js';
-import * as fs from 'fs';
+'use client'
 
-async function transferToWallet() {
+import { useState } from 'react';
+import { Connection, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
+import bs58 from 'bs58';
+
+const connection = new Connection('https://api.devnet.solana.com');
+
+const TransferPage = () => {
+  const [sending, setSending] = useState(false);
+
+  const handleTransfer = async () => {
     try {
-        // Establecer la conexión a la red de Solana
-        const connection = new Connection('https://api.devnet.solana.com', 'confirmed');
+      setSending(true);
 
-        // Definir las direcciones de las carteras
-        const fromWallet = new PublicKey('BHJPnGVAy1JxF2aXuNy2CGMN1RD1HMB6iP6EAnJcF54N');
-        const toWallet = new PublicKey('Crr9kNif1rCMwXehpCU3yibmDcQVXGqJGXRNspdgHkY');
+      // Obtener la clave pública del remitente y el destinatario
+      const senderPublicKey = new PublicKey('9xQeWvG816bUx9ECwBseuKU1Q1K6x1QQXyBga22ZbYi');
+      const receiverPublicKey = new PublicKey('Crr9kNif1rCMwXehpCU3yibmDcQVXGqJGXRNspdgHkY');
 
-        // Obtener el balance mínimo necesario para la exención del alquiler
-        const lamports = await connection.getMinimumBalanceForRentExemption(0); // Use 0 for account creation
-        console.log('Minimum balance for rent exemption:', lamports);
+      // Obtener la clave privada del remitente
+      const senderPrivateKeyStr = '21GgQbe9St47XeX8J7pvKcfez1xEqpwS8CvBb61YeeJ5mgjCZ7ro2AEeb9X2UgdWDwHLjWP6n65ajQeoZG8nstyz';
+      const senderPrivateKey = Uint8Array.from(bs58.decode(senderPrivateKeyStr));
 
-        // Crear la transacción
-        const transaction = new Transaction().add(
-            SystemProgram.transfer({
-                fromPubkey: fromWallet,
-                toPubkey: toWallet,
-                lamports: lamports // transferir todos los lamports
-            })
-        );
+      // Obtener el hash del bloque más reciente
+      const recentBlockhash = await connection.getRecentBlockhash();
 
-        // Establecer el pagador de tarifas (fee payer)
-        transaction.feePayer = fromWallet;
+      // Crear una transacción para la transferencia
+      const transaction = new Transaction({
+        recentBlockhash: recentBlockhash.blockhash,
+        feePayer: senderPublicKey,
+      });
 
-        console.log('Transaction:', transaction);
+      transaction.add(
+        // Instrucción para transferir fondos
+        SystemProgram.transfer({
+          fromPubkey: senderPublicKey,
+          toPubkey: receiverPublicKey,
+          lamports: 1000000, // Monto en lamports (1 Sol = 1,000,000 lamports)
+        })
+      );
 
-        // Firmar la transacción con la clave privada
-        const privateKey = Uint8Array.from(JSON.parse(fs.readFileSync('path/to/your/private/key.json')));
-        transaction.sign(privateKey);
+      // Firmar y enviar la transacción
+      const signature = await window.solana.signTransaction(transaction, senderPrivateKey);
+      const txid = await connection.sendRawTransaction(signature);
 
-        // Enviar la transacción
-        const signature = await connection.sendRawTransaction(transaction.serialize());
-        console.log('Transaction signature:', signature);
+      console.log('Transferencia exitosa. Txid:', txid);
     } catch (error) {
-        console.error('Error sending transaction:', error);
+      console.error('Error al transferir:', error);
+    } finally {
+      setSending(false);
     }
-}
+  };
 
-export default transferToWallet;
+  return (
+    <div>
+      <h1>Transferencia de Solana</h1>
+      <button onClick={handleTransfer} disabled={sending}>
+        {sending ? 'Enviando...' : 'Transferir'}
+      </button>
+    </div>
+  );
+};
+
+export default TransferPage;
