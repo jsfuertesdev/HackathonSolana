@@ -41,7 +41,7 @@ const SolanaButton = () => {
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <button onClick={handleConnect} id="connectButton">Connect to Solana</button>
+        <button className='btn' onClick={handleConnect} id="connectButton">Connect to Solana</button>
       )}
     </div>
   );

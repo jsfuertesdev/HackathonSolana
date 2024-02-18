@@ -12,7 +12,7 @@ function Card({title, author, exercise, tags}) {
           <p>{author}</p>
         </div>
         <div className='tags-container'>
-          {tags.map((tag)=>(
+          {tags?.map((tag)=>(
             <button className='tag btn'>{tag}</button>
           ))}
         </div>
