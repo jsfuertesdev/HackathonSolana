@@ -1,4 +1,4 @@
-# LifeSport Platform
+# AthleteAlly
 
 ## Overview
 
