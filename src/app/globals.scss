@@ -1,0 +1,51 @@
+$main-color: #849fe7;
+$main-color-variation: #dee7ff;
+$secondary-color: #ce2e4a;
+$background-color: #0e0c10;
+$font-family:  "Roboto", sans-serif;
+$border-radius: 0.4rem;
+
+@mixin displayFlex($flex-direction: row, $justify-content, $align-items, $gap: 0, $wrap: wrap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+html {
+  font-size: 10px;
+  font-family: $font-family;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.btn {
+  height: 4rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $main-color;
+  color: white;
+  font-family: $font-family;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: $secondary-color;
+}
+
+.btn:active {
+  background-color: $background-color;
+}
