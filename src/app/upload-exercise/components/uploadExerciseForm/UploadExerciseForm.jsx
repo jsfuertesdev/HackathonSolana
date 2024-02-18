@@ -53,7 +53,7 @@ function UploadExerciseForm() {
           <input required className="ipt" type="tags" />
         </div>
         <MetaMaskButton />
-        <button type="submit" className="btn">WIN TOKENS</button>
+        {/* <button type="submit" className="btn">WIN TOKENS</button> */}
       </form>
     </div>
   );
