@@ -2,7 +2,7 @@ import './card.scss';
 
 function Card({title, author, exercise, tags}) {
   return (
-    <div>
+    <div className='card__container_superior'>
       <div className='card__container'>
         <div className='card-image__container'>
           <img src={exercise} alt="exercise" />

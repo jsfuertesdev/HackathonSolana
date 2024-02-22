@@ -1,48 +1,56 @@
 @import '../../../globals.scss';
 
-.card__container {
-    @include displayFlex(column, start, start, 1rem);
-    color: #ffffff;
-    width: 35rem;
-    height: 35rem;
-    padding: 1.2rem;
-    background-color: $grey;
-    border-radius: $border-radius;
-    font-size: 1.4rem;
+.card__container_superior{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 
-    .card-image__container {
-        width: 100%;
-        height: 22rem;
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
-        overflow: hidden;
-        object-fit: cover;
-
-        img {
+    .card__container {
+        @include displayFlex(column, start, start, 1rem);
+        color: #ffffff;
+        width: 35rem;
+        height: 35rem;
+        padding: 1.2rem;
+        background-color: $grey;
+        border-radius: $border-radius;
+        font-size: 1.4rem;
+    
+        .card-image__container {
             width: 100%;
+            height: 22rem;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+            overflow: hidden;
             object-fit: cover;
+    
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
         }
-    }
-
-    .card-content__container {
-        h2 {
-            font-size: 1.6rem;
+    
+        .card-content__container {
+            h2 {
+                font-size: 1.6rem;
+            }
         }
-    }
-
-    .tags-container {
-        @include displayFlex(row, flex-start, flex-start, 0.8rem);
-        width: 100%;
-
-        .tag {
-            height: fit-content;
-            width: fit-content;
-            padding: 0.3rem 0.5rem;
-            background-color: $secondary-color;
-        }
-
-        .tag:hover {
-            background-color: $main-color;
+    
+        .tags-container {
+            @include displayFlex(row, flex-start, flex-start, 0.8rem);
+            width: 100%;
+    
+            .tag {
+                height: fit-content;
+                width: fit-content;
+                padding: 0.3rem 0.5rem;
+                background-color: $secondary-color;
+            }
+    
+            .tag:hover {
+                background-color: $main-color;
+            }
         }
     }
 }
+

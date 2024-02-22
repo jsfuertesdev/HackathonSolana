@@ -2,8 +2,12 @@
 
 .dashboard {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    width: 100%;
+    flex-direction: row;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3%;
+    align-items: center;
+    white-space: nowrap;
     // /* Responsive adjustments */
     // @media screen and (max-width: 900px) {
     //     grid-template-columns: repeat(2, minmax(300px, 1fr)); /* On small screens, change to a single column layout */
@@ -12,3 +16,4 @@
     //     grid-template-columns: 1fr; /* On small screens, change to a single column layout */
     // }
 }
+ 
