@@ -57,3 +57,17 @@ body {
   background-color: $background-color;
   color: $secondary-color;
 }
+
+/* Estilo para la barra de desplazamiento en Google Chrome */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del "pulgar" de la barra de desplazamiento */
+  border-radius: 6px; /* Bordes redondeados del "pulgar" */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cambia el color del "pulgar" al pasar el mouse sobre él */
+}
