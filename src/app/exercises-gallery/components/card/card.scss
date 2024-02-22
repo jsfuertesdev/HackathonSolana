@@ -22,11 +22,10 @@
             border-top-left-radius: $border-radius;
             border-top-right-radius: $border-radius;
             overflow: hidden;
-            object-fit: cover;
     
             img {
                 width: 100%;
-                object-fit: cover;
+                object-fit: scale-down;
             }
         }
     
