@@ -1,7 +1,7 @@
-import Exercises_use_sports from "@/models/Exercises_use_sports";
-import Exercises from "@/models/Exercises";
-import User from "@/models/Users";
-import Sports from "@/models/Sports";
+import Exercises_use_sports from "../models/Exercises_use_sports";
+import Exercises from "../models/Exercises";
+import User from "../models/Users";
+import Sports from "../models/Sports";
 
 const postNewExercises = async ({ newExercise }) => {
   const author = await User.findOne({
