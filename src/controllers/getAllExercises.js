@@ -1,7 +1,7 @@
-import User from "@/models/Users";
-import Sports from "@/models/Sports";
-import Exercises from "@/models/Exercises";
-import Exercises_use_sports from "@/models/Exercises_use_sports";
+import User from "../models/Users";
+import Sports from "../models/Sports";
+import Exercises from "../models/Exercises";
+import Exercises_use_sports from "../models/Exercises_use_sports";
 import Sequelize from "sequelize";
 
 const getAllExercises = async () => {
