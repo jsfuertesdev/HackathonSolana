@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import sequelize from "@/services/database";
+import sequelize from "../services/database";
 import Exercises from "./Exercises";
 
 const Exercises_use_sports = sequelize.define(
